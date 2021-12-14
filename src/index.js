@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './style.js';
+
+import { BrowserRouter, Route, Switch } from 'react-router-dom'; //12/09
+
+//import  { GlobalStyle } from './style.js';   //导入GlobalStyle
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+//import  { GlobalStyleIcon } from './statics/iconfont/iconfont.js';   //导入GlobalStyleIcon
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+    <BrowserRouter >
+        <App />
+    </BrowserRouter>
+    ,document.getElementById('root') );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
