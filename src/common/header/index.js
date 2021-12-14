@@ -12,6 +12,7 @@ import   { Link } from 'react-router-dom';// 路由
 import    { actionCreators }  from './store/index.js';
 //导入login的actionCreators
 import    { actionCreators as loginActionCreators }  from '../../pages/login/store';
+import { Navigate } from 'react-router-dom';
 
 import { HeaderWrapper,
          Logo,
@@ -75,7 +76,7 @@ class Header extends Component{
                 <Logo href='/' />
                 <Nav>
                     
-                    <NavItem className='left active'>Home</NavItem>
+                    <NavItem className='left active'  onClick={ ()=>{window.location.href="/"}  }>Home</NavItem>
                     <NavItem className='left'>Download App</NavItem>
                     {login? <NavItem className='right' onClick={logout}>Sign out</NavItem>: 
                             <Link to= '/login'><NavItem className='right'>Login</NavItem></Link> }
@@ -114,6 +115,14 @@ class Header extends Component{
         );
 
     }
+    toHome(){
+        console.log("haha");
+        //<Link to= '/login'>
+        return <Navigate to='/'/>
+
+          
+    }
+
 }
 
 //     // handleInputFocus(){
@@ -123,12 +132,6 @@ class Header extends Component{
 //     //     });
 //     // }
 
-//     // handleInputBlur(){
-//     //     //console.log("haha");
-//     //     this.setState({
-//     //         focused : false
-//     //     });
-//     // }
 
 // }
 
