@@ -16,7 +16,7 @@ class Write extends PureComponent{ //没有 ()
             //console.log("login");
             return (
                 <div>
-                    开始写文章
+                    Start writing......
                 </div>
             );
         }else{

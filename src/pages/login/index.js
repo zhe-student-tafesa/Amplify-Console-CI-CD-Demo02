@@ -23,9 +23,9 @@ class Login extends PureComponent{ //没有 ()
             return (
                 <LoginWrapper>
                     <LoginBox>
-                        <Input placeholder="账号" ref= {(input)=> {this.account= input}}/>
-                        <Input placeholder="密码" ref= {(input)=> {this.password= input}} type= 'password'/>
-                        <Button onClick={ ()=>{this.props.login(this.account,this.password)}}>登录</Button>
+                        <Input placeholder="User Name" ref= {(input)=> {this.account= input}}/>
+                        <Input placeholder="Password" ref= {(input)=> {this.password= input}} type= 'password'/>
+                        <Button onClick={ ()=>{this.props.login(this.account,this.password)}}>Login</Button>
                     </LoginBox>
                 </LoginWrapper>
             );

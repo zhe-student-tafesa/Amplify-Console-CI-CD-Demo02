@@ -27,7 +27,7 @@ class List extends PureComponent{ //没有 ()
                     )
                 }
             )}
-            <LoadMore onClick= { ()=> this.props.getMoreList(this.props.page) }>更多</LoadMore>
+            <LoadMore onClick= { ()=> this.props.getMoreList(this.props.page) }>More</LoadMore>
  
             </div>
         );

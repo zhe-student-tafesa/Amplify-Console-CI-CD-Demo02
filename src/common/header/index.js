@@ -49,10 +49,10 @@ class Header extends Component{
                             onMouseLeave= {this.props.handleMouseLeave}
                 >
                     <SearchInfoTitle>
-                        热门搜索
+                        popular searches
                         <SearchInfoSwitch onClick= {()=> handleChangePage(page, totalPage, this.spinIcon)}>
                             <span ref={(icon) => {this.spinIcon = icon}}  className="iconfont spin">&#xe851;</span>
-                            换一批
+                            next page
                         </SearchInfoSwitch>
                         <SearchInfoList>
                             {
@@ -75,10 +75,10 @@ class Header extends Component{
                 <Logo href='/' />
                 <Nav>
                     
-                    <NavItem className='left active'>首页</NavItem>
-                    <NavItem className='left'>下载App</NavItem>
-                    {login? <NavItem className='right' onClick={logout}>退出</NavItem>: 
-                            <Link to= '/login'><NavItem className='right'>登录</NavItem></Link> }
+                    <NavItem className='left active'>Home</NavItem>
+                    <NavItem className='left'>Download App</NavItem>
+                    {login? <NavItem className='right' onClick={logout}>Sign out</NavItem>: 
+                            <Link to= '/login'><NavItem className='right'>Login</NavItem></Link> }
                     
                     <NavItem className='right'>
                         <span className="iconfont">&#xe636;</span>
@@ -103,10 +103,10 @@ class Header extends Component{
                     <Link to='/write'>
                         <Button className='writting'>
                             <span className="iconfont">&#xe708;</span>
-                            写文章
+                            Write an essay
                         </Button>
                     </Link>
-                    <Button className='reg'>注册</Button>
+                    <Button className='reg'>Register</Button>
                 </Addition>
             </HeaderWrapper>
 
