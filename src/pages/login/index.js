@@ -8,7 +8,8 @@ import { Navigate } from 'react-router-dom';
 import {LoginWrapper,
         LoginBox,
         Input,
-        Button
+        Button,
+        ButtonBig
 
 
 } from './style';
@@ -17,7 +18,7 @@ import {LoginWrapper,
 class Login extends PureComponent{ //没有 ()
     render(){
         //console.log(window.location.search.substr(4));// 看 路由
-        const { loginStatus }=this.props;
+        const { loginStatus, loginMessage }=this.props;
         if(!loginStatus){
             //console.log("login");
             return (
@@ -26,6 +27,12 @@ class Login extends PureComponent{ //没有 ()
                         <Input placeholder="User Name" ref= {(input)=> {this.account= input}}/>
                         <Input placeholder="Password" ref= {(input)=> {this.password= input}} type= 'password'/>
                         <Button onClick={ ()=>{this.props.login(this.account,this.password)}}>Login</Button>
+                        
+                        {loginMessage? <ButtonBig className='active' >{loginMessage}</ButtonBig>: 
+                             null }
+
+
+                        <Button onClick={ ()=>{window.location.href="/register"} }>Register</Button>
                     </LoginBox>
                 </LoginWrapper>
             );
@@ -42,7 +49,8 @@ class Login extends PureComponent{ //没有 ()
 
 
 const mapState=(state)=>({// 把登录 状态拿出来
-    loginStatus: state.getIn(['login','login'])
+    loginStatus: state.getIn(['login','login']),
+    loginMessage: state.getIn(['login','message'])
 });
 
 

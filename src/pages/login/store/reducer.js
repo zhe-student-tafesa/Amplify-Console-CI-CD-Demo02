@@ -7,7 +7,8 @@ import { fromJS } from 'immutable';//immutable 给我们 提供了 fromJS方法
 
 //reducer.js
 const defaultState = fromJS({ //list 保存 搜索AJAX数据   fromJS把普通对象转成 immutable,默认未登录
-    login: false
+    login: false,
+    message:''
     
 
 
@@ -17,7 +18,9 @@ export default (state= defaultState, action)=>{//纯 函数
  
     if(action.type=== constants.CHANGE_LOGIN){// 
         return state.merge({
-            login: fromJS(action.login)
+            login: fromJS(action.login),
+            message: fromJS(action.message)
+
         });
     }
     //constants.LOGOUT

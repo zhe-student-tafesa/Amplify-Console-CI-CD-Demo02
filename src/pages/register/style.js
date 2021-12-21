@@ -15,7 +15,7 @@ export const LoginWrapper= styled.div`
 
 export const LoginBox= styled.div`
     width: 400px;
-    height: 200px;
+    height: 400px;
     margin: 100px auto;// 左右居中
     background: #fff;
     box-shadow: 0 0 8px rgb(0,0,0,0.1);
@@ -46,13 +46,10 @@ export const Button= styled.div`
     margin: 15px auto;
     text-align: center;
 
-
 `;
-
-
 export const ButtonBig= styled.div`
     
-    //width: 220px;
+    //width: 330px;
     height: 30px;
     line-height: 30px;
     color: #fff;
@@ -64,5 +61,6 @@ export const ButtonBig= styled.div`
     &.active {background: #fff; 
               color: red;}
 
-
 `;
+
+

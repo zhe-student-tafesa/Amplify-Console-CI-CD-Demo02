@@ -8,6 +8,7 @@ import Home  from './pages/home/index.js';
 import Detail  from './pages/detail/loadable.js';//异步 加载
 import Login  from './pages/login/index.js';
 import Write  from './pages/write/index.js';
+import Register  from './pages/register/index.js';//register
 
 //import {connect}  from 'react-redux';//使用connect 连接 store与 todolist
 import  { GlobalStyle } from './style.js';   //导入GlobalStyle
@@ -29,6 +30,7 @@ class App extends Component{
                 <Route path='/detail' exact element={<Detail />}  />  
                 <Route path='/login'  exact element={<Login />}  /> 
                 <Route path='/write'  exact element={<Write />}  />  
+                <Route path='/register'  exact element={<Register />}  />  
               </Routes>
             
             </div>

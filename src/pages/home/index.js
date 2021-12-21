@@ -18,7 +18,7 @@ class Home extends PureComponent{ //没有 ()
         return (
             <HomeWrapper>
                 <HomeLeft>  
-                    <img className= 'banner-img' src="https://learn.tafesa.edu.au/pluginfile.php/895153/theme_snap/coverimage/1598248446/course-image.jpg" alt="flo"/>
+                    <img className= 'banner-img' src="https://bestonglobalfoods.com.au/app/uploads/2020/02/Medal-Wall-1.jpg" alt="awards"/>
                     <Topic />
                     <List />
                 </HomeLeft>

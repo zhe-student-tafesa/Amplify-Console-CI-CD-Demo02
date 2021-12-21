@@ -7,11 +7,14 @@ import {reducer as detailReducer } from '../pages/detail/store/index.js' ;//  �
 
 import {reducer as loginReducer } from '../pages/login/store/index.js' ;//  引入 login页 reducer
 
+import {reducer as registerReducer } from '../pages/register/store/index.js' ;//  引入 login页 reducer
+
 const reducer = combineReducers({
     header: headerReducer,
     home: homeReducer,
     detail: detailReducer,
-    login: loginReducer
+    login: loginReducer,
+    register: registerReducer
 });
 
 export default reducer;

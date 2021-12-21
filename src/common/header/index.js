@@ -107,7 +107,7 @@ class Header extends Component{
                             Write an essay
                         </Button>
                     </Link>
-                    <Button className='reg'>Register</Button>
+                    <Button className='reg' onClick={ ()=>{window.location.href="/register"}  } >Register</Button>
                 </Addition>
             </HeaderWrapper>
 
