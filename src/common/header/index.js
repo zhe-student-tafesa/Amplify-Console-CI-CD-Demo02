@@ -5,7 +5,7 @@ import  { connect } from 'react-redux';
 //HeaderWrapper，
 
 import { CSSTransition } from 'react-transition-group';
-import   { Link } from 'react-router-dom';// 路由
+import   { Link } from 'react-router-dom';// router
 
 //导入 所有 内容
 //import  * as actionCreators  from './store/actionCreators';

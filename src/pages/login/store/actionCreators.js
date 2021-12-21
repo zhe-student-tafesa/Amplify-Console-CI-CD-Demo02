@@ -4,7 +4,7 @@ import axios from 'axios';
 //constants
 import * as constants from './constants.js';//
 
-const changeLogin= (result)=> ({//通过 第二个 action 把 类型和数据 传给 reducer
+const changeLogin= (result)=> ({// 通过 第二个 action 把 类型和数据 传给 reducer
     
     type: constants.CHANGE_LOGIN ,
     login:result.success,

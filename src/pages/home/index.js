@@ -13,7 +13,7 @@ import { HomeWrapper,
          BackTop
 } from './style.js'
 
-class Home extends PureComponent{ //没有 ()
+class Home extends PureComponent{ //No ()
     render(){
         return (
             <HomeWrapper>

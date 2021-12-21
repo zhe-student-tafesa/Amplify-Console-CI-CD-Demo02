@@ -17,7 +17,7 @@ import {LoginWrapper,
 } from './style';
 
 
-class Register extends PureComponent{ //没有 ()
+class Register extends PureComponent{ //no ()
     constructor(props){
         super(props);
         this.state=store.getState();

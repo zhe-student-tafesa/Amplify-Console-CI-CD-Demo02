@@ -15,7 +15,7 @@ import {LoginWrapper,
 } from './style';
 
 
-class Login extends PureComponent{ //没有 ()
+class Login extends PureComponent{ //no ()
     render(){
         //console.log(window.location.search.substr(4));// 看 路由
         const { loginStatus, loginMessage }=this.props;

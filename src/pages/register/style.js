@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 
-//给登录界面 一个 背景
+//给登录界面 一个 背景bg color
 export const LoginWrapper= styled.div`
     z-index: 0;//为了 让 搜索 能够 出现 在上 层
     position: absolute;

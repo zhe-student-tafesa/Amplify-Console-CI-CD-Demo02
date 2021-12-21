@@ -11,7 +11,7 @@ import Write  from './pages/write/index.js';
 import Register  from './pages/register/index.js';//register
 
 //import {connect}  from 'react-redux';//使用connect 连接 store与 todolist
-import  { GlobalStyle } from './style.js';   //导入GlobalStyle
+import  { GlobalStyle } from './style.js';   //import GlobalStyle
 import  { GlobalStyleIcon } from './statics/iconfont/iconfont.js';   //导入GlobalStyle  <GlobalStyleIcon/>
 import Header  from './common/header/index.js';
 

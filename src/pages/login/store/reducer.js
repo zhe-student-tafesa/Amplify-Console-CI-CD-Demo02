@@ -2,7 +2,7 @@
 import * as constants from './constants';
 
 import { fromJS } from 'immutable';//immutable 给我们 提供了 fromJS方法
-//fromJS功能：把js对象转成immutable 对象
+// fromJS功能：把js对象转成immutable 对象
 
 
 //reducer.js

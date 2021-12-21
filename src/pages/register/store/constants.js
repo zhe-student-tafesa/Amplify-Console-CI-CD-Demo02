@@ -2,5 +2,5 @@
 export const CHANGE_LOGIN= 'login/CHANGE_LOGIN';
 
 
-//LOGOUT
+//LOGOUT 
 export const LOGOUT= 'login/LOGOUT';

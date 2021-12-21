@@ -11,7 +11,7 @@ const changeLogin= (result)=> ({//通过 第二个 action 把 类型和数据 �
     login:true
 });
 
-//register  异步操作 第一个 action  12/21  Frank
+//register  异步操作 第一个 action   12/21  Frank
 export const  register= (firstName, lastName, email  , phone   ,password,rePassword)=> {
     let formData= new FormData();
     let result='';
