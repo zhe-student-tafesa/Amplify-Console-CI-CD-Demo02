@@ -56,5 +56,6 @@ export const  login= (account, password)=> {
 //logout
 export const logout = ()=>({
     type: constants.LOGOUT,
-    login: false
+    login: false,
+    message:''
 });

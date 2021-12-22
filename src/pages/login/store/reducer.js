@@ -26,7 +26,8 @@ export default (state= defaultState, action)=>{//纯 函数
     //constants.LOGOUT
     if(action.type=== constants.LOGOUT){// 
         return state.merge({
-            login: fromJS(action.login)
+            login: fromJS(action.login),
+            message: fromJS(action.message)
         });
     }
     return state;
