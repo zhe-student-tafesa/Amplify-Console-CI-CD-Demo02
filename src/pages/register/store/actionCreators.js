@@ -22,7 +22,7 @@ export const  register= (firstName, lastName, email  , phone   ,password,rePassw
     formData.append("phone", phone);
     formData.append("password", password);
     formData.append("repassword", rePassword);
-    const url="http://localhost:80/5ewd/BFC/register.php";
+    const url="http://54.208.196.248/dashboard/register.php";
     //formData.append("text","AAAAABBB");
     //const url="http://localhost:80/react-backend/index2.php";
     //console.log(formData);
