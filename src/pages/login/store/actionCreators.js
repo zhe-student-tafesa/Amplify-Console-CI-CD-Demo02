@@ -16,7 +16,8 @@ export const  login= (account, password)=> {
     let formData= new FormData();
     formData.append("email",account);
     formData.append("password",password);
-    const url="http://54.208.196.248/dashboard/login.php";
+    //const url="http://localhost:80/5ewd/BFC/login.php";// local  backend
+    const url="http://54.208.196.248/dashboard/login.php";  //AWS EC2 backend
     return (dispatch)=> {// 应该用post 更安全
         axios.post(url,formData)
         .then(res=> {
