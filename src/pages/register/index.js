@@ -11,7 +11,8 @@ import {LoginWrapper,
         LoginBox,
         Input,
         Button,
-        ButtonBig
+        ButtonBig,
+        Lable
 
 
 } from './style';
@@ -24,6 +25,7 @@ class Register extends PureComponent{ //no ()
         this.handleStoreChange=this.handleStoreChange.bind(this);
         this.register=this.register.bind(this);
         this.loginNow= this.loginNow.bind(this);
+        this.validateErrors= this.validateErrors.bind(this);
         //console.log(this.state.get('reg_state'));
         //console.log(this.state.get('message'));
         store.subscribe(this.handleStoreChange);
@@ -42,12 +44,40 @@ class Register extends PureComponent{ //no ()
             return (
                 <LoginWrapper>
                     <LoginBox>
-                        <Input placeholder="First Name" ref= {(input)=> {this.firstName= input}}/>
+                        
+                        
+                        <Input placeholder="First Name" ref= {(input)=> {this.firstName= input}}
+                        />
+
                         <Input placeholder="Last Name"  ref= {(input)=> {this.lastName= input}}/>
-                        <Input placeholder="Email"      ref= {(input)=> {this.email= input}}/>
+
+                        <Input placeholder="Email"      ref= {(input)=> {this.email= input}}
+                            id="email"              
+                            type= 'email'
+                            title="                   email:me@example.com" 
+                            pattern="^\w{3,}(\.\w{0,}){0,}@[A-z0-9]{1,}\.[A-z]{2,5}(\.[A-z]{2,5}){0,1}$" required
+                            name="email"
+                            
+                            onBlur={()=>{this.validateErrors('email','emailError')}}
+                        />
+                        <span id="emailError" style={{display:'none'}} > </span>
+
+
                         <Input placeholder="Phone"      ref= {(input)=> {this.phone= input}}/>
                
-                        <Input placeholder="Password"                   ref= {(input)=> {this.password= input}} type= 'password'/>
+
+                        <Input placeholder="Password"     
+                                id="password"              
+                                ref= {(input)=> {this.password= input}} type= 'password'
+                                title="at least eight symbols containing at least one number, one lower, and one upper letter" 
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required
+                                name="password"
+                                
+                                onBlur={()=>{this.validateErrors('password','passwordError')}}
+                        />
+                        <span id="passwordError" style={{display:'none'}} > </span>
+
+
                         <Input placeholder="Enter the password again"   ref= {(input)=> {this.rePassword= input}} type= 'password'/>
                         <Button onClick={ ()=>{this.register(this.firstName,this.lastName, this.email  , this.phone   ,this.password,this.rePassword)}}>
                             Register
@@ -73,6 +103,36 @@ class Register extends PureComponent{ //no ()
         actionCreators.register(firstNameElem.value,lastNameElem.value, emailElem.value , phoneElem.value ,passwordElem.value , rePasswordElem.value);
 
     }
+    validateErrors(formField, errorField) {
+        const theField = document.getElementById(formField);
+        //create a variable for the form field 
+        const theError = document.getElementById(errorField);
+        //create a variable for the error field 
+
+
+        var thePattern = new RegExp("^" + theField.pattern + "$"); //////////正则表达式
+        //create a new pattern by reading in pattern from HTML and adding delimiters 
+        if (!thePattern.test(theField.value)) { //如果 不合法
+          //test data in field against regex pattern from HTML 
+          theField.style.background = '#FF9999';
+          //sets field background to red 
+          theError.style.display = "block";
+          //displays the <span> containing the error msg 
+          theError.innerHTML = theField.title;
+          //displays the error message by reading the HTML title and writing it to the 
+          //span 
+          theField.focus();
+          //set focus to field 
+          return false;
+        } else { //如果  合法
+          theField.style.background = '#CCFFCC';
+          //sets field background to green
+
+          theError.style.display = "none";
+          //removes error message 
+          return true;
+        }
+      }
 
 }
 

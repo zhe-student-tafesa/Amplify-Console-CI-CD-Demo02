@@ -14,7 +14,7 @@ export const LoginWrapper= styled.div`
 `;
 
 export const LoginBox= styled.div`
-    width: 400px;
+    width: 600px;
     height: 400px;
     margin: 100px auto;// 左右居中
     background: #fff;
@@ -22,6 +22,17 @@ export const LoginBox= styled.div`
     padding-top: 20px;
 `;
 
+
+export const Lable= styled.label`
+    //display: block;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    color: #777;
+    margin: 10px 10px;//Lable
+
+`;
 
 export const Input= styled.input`
     display: block;
