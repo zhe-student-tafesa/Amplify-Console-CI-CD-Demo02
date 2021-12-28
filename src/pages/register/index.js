@@ -12,7 +12,8 @@ import {LoginWrapper,
         Input,
         Button,
         ButtonBig,
-        Lable
+        Lable,
+        Span
 
 
 } from './style';
@@ -51,7 +52,7 @@ class Register extends PureComponent{ //no ()
 
                         <Input placeholder="Last Name"  ref= {(input)=> {this.lastName= input}}/>
 
-                        <Input placeholder="Email"      ref= {(input)=> {this.email= input}}
+                        <Input placeholder="Email (user name)"      ref= {(input)=> {this.email= input}}
                             id="email"              
                             type= 'email'
                             title="                   email:me@example.com" 
@@ -60,7 +61,7 @@ class Register extends PureComponent{ //no ()
                             
                             onBlur={()=>{this.validateErrors('email','emailError')}}
                         />
-                        <span id="emailError" style={{display:'none'}} > </span>
+                        <Span id="emailError" style={{display:'none'}} > </Span>
 
 
                         <Input placeholder="Phone"      ref= {(input)=> {this.phone= input}}/>
@@ -75,7 +76,7 @@ class Register extends PureComponent{ //no ()
                                 
                                 onBlur={()=>{this.validateErrors('password','passwordError')}}
                         />
-                        <span id="passwordError" style={{display:'none'}} > </span>
+                        <Span id="passwordError" style={{display:'none'}} > </Span>
 
 
                         <Input placeholder="Enter the password again"   ref= {(input)=> {this.rePassword= input}} type= 'password'/>

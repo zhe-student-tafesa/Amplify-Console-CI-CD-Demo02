@@ -34,6 +34,18 @@ export const Lable= styled.label`
 
 `;
 
+export const Span= styled.span`
+    //display: block;
+    width: 400px;
+    height: 60px;
+    text-align:center;//居中显示
+    line-height: 30px;
+    //padding: 0 10px;
+    color: #777;
+    margin: 10px auto;//Lable
+
+`;
+
 export const Input= styled.input`
     display: block;
     width: 200px;
