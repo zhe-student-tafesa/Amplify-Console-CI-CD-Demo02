@@ -175,6 +175,7 @@ const mapDispatchToProps=(dispatch)=>{
             const action= loginActionCreators.logout();
             dispatch(action); 
             cookie.remove('bfcUser');
+            window.location.href="/";
         },
         
         handleMouseLeave(){
