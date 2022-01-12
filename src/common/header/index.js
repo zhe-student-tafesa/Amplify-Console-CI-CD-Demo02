@@ -6,6 +6,7 @@ import  { connect } from 'react-redux';
 
 import { CSSTransition } from 'react-transition-group';
 import   { Link } from 'react-router-dom';// router
+import cookie from 'react-cookies';//  张哲 1月12
 
 //导入 所有 内容
 //import  * as actionCreators  from './store/actionCreators';
@@ -78,7 +79,7 @@ class Header extends Component{
                     
                     <NavItem className='left active'  onClick={ ()=>{window.location.href="/"}  }>Home</NavItem>
                     <NavItem className='left'>Download App</NavItem>
-                    {login? <NavItem className='right' onClick={logout}>Sign out</NavItem>: 
+                    {(login ||cookie.load('bfcUser'))? <NavItem className='right' onClick={logout}>Sign out</NavItem>: 
                             <Link to= '/login'><NavItem className='right'>Login</NavItem></Link> }
                     
                     <NavItem className='right'>
@@ -170,8 +171,10 @@ const mapDispatchToProps=(dispatch)=>{
            dispatch(action); 
         },
         logout(){//点击 退出时 ，需要 用login 的 actionCreators
+
             const action= loginActionCreators.logout();
             dispatch(action); 
+            cookie.remove('bfcUser');
         },
         
         handleMouseLeave(){
